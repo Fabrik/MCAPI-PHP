@@ -5,10 +5,10 @@ Tested under: PHP 5
 
 Requires:
 
-    * PHP 5
-    * PHP 4 may work, but it has not and won't be tested
+- PHP 5
+- PHP 4 may work, but it has not and won't be tested
 
-===== About =====
+# About
 
 Our MCAPI (MailChimp API) wrapper class is provided to help jump-start your PHP 
 development efforts. Using it allows you to ignore the whole network 
@@ -27,7 +27,7 @@ Terminal/Command Line. If you are not familiar with executing PHP code from a
 command line, see here:
     http://us3.php.net/features.commandline
 
-===== Getting Started =====
+# Getting Started
 
 1) Open the inc/config.inc.php file and fill in at least these values:
 	* API Key (from http://admin.mailchimp.com/account/api/)(
@@ -45,7 +45,7 @@ we see people having are due to them ignoring or not checking for error
 messages. The examples provided show some very reasonable methods of performing
 the requisite error checking.
 
-===== Advanced Options =====
+# Advanced Options
 
 SSL support
 ------------------
@@ -67,7 +67,7 @@ various calls, simply run:
 That can be changed between calls without reinstantiating the MCAPI object. 
 
 
-===== License =====
+# License
 
 Copyright (c) 2008,2010 MailChimp, released under the MIT license
 
