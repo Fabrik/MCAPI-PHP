@@ -4,10 +4,12 @@ API Version: 1.3
 Tested under: PHP 5 
 
 Requires:
+
     * PHP 5
     * PHP 4 may work, but it has not and won't be tested
 
 ===== About =====
+
 Our MCAPI (MailChimp API) wrapper class is provided to help jump-start your PHP 
 development efforts. Using it allows you to ignore the whole network 
 connectivity and data transfer pieces that are typically necessary when using an
@@ -26,6 +28,7 @@ command line, see here:
     http://us3.php.net/features.commandline
 
 ===== Getting Started =====
+
 1) Open the inc/config.inc.php file and fill in at least these values:
 	* API Key (from http://admin.mailchimp.com/account/api/)(
     *  other parameters are necessary for more in-depth examples)
@@ -43,10 +46,12 @@ messages. The examples provided show some very reasonable methods of performing
 the requisite error checking.
 
 ===== Advanced Options =====
+
 SSL support
 ------------------
 Our API does supporting connecting via SSL for those worried about Man-in-the-Middle 
 attacks/data collection. To use it in the MCAPI wrapper, simple do this:
+
 	$api = new MCAPI($apikey);
 	$api->useSecure(true);
 
@@ -56,12 +61,14 @@ Custom Timeouts
 ------------------
 This wrapper defaults the Timeout value for a call to 300 seconds. To adjust that for
 various calls, simply run:
+
 	$api->setTimeout($your_value_in_seconds);
 
 That can be changed between calls without reinstantiating the MCAPI object. 
 
 
 ===== License =====
+
 Copyright (c) 2008,2010 MailChimp, released under the MIT license
 
 Permission is hereby granted, free of charge, to any person
