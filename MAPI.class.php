@@ -39,6 +39,10 @@ class MCAPI {
     public function __construct($apikey, $secure=false) {
         $this->secure = $secure;
         $aAPIKey = explode("-", $apikey);
+	if (count($aAPIKey) === 1)
+	{
+		$aAPIKey[1] = 'us1';
+	}
         $apiURL = sprintf("http://%s.api.mailchimp.com/%.1f/?output=php", $aAPIKey[1], $this->version);
         $this->apiUrl = parse_url($apiURL);
         $this->api_key = $apikey;
@@ -2813,13 +2817,8 @@ class MCAPI {
      * You should never have to call this function manually
      */
     function callServer($method, $params) {
-	    $dc = "us1";
-	    if (strstr($this->api_key,"-")){
-        	list($key, $dc) = explode("-",$this->api_key,2);
-            if (!$dc) $dc = "us1";
-        }
-        $host = $dc.".".$this->apiUrl["host"];
-		$params["apikey"] = $this->api_key;
+	$host = $this->apiUrl["host"];
+	$params["apikey"] = $this->api_key;
 
         $this->errorMessage = "";
         $this->errorCode = "";
