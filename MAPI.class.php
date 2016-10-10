@@ -39,8 +39,8 @@ class MCAPI {
     public function __construct($apikey, $secure=false) {
         $this->secure = $secure;
         $aAPIKey = explode("-", $apikey);
-        $apikey = sprintf("http://%s.api.mailchimp.com/%.1f/?output=php", $aAPIKey[1], $this->version);
-        $this->apiUrl = parse_url($apikey);
+        $apiURL = sprintf("http://%s.api.mailchimp.com/%.1f/?output=php", $aAPIKey[1], $this->version);
+        $this->apiUrl = parse_url($apiURL);
         $this->api_key = $apikey;
     }
     function setTimeout($seconds){
